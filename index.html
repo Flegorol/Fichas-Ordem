@@ -3,62 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <title>Acesso - Ordem Paranormal</title>
+
   <style>
     body {
-      background-color: #0b0b0b;
-      color: white;
-      font-family: Arial;
-      text-align: center;
-      padding: 80px;
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      color: #e6e6e6;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      letter-spacing: 2px;
     }
 
     img {
-      width: 150px;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 0 10px red);
+      width: 140px;
+      margin-bottom: 40px;
+      opacity: 0.9;
     }
 
     h1 {
-      font-size: 40px;
-      color: red;
-      letter-spacing: 3px;
+      font-weight: 300;
+      font-size: 32px;
+      margin: 0;
+    }
+
+    .linha {
+      width: 200px;
+      height: 1px;
+      background: #8b0000;
+      margin: 20px 0 40px 0;
     }
 
     input {
-      padding: 12px;
-      font-size: 18px;
-      width: 200px;
-      text-align: center;
-      background: #222;
-      border: 1px solid red;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #444;
       color: white;
-      margin-top: 20px;
+      padding: 10px;
+      font-size: 18px;
+      text-align: center;
+      width: 220px;
+      outline: none;
+      letter-spacing: 4px;
+    }
+
+    input:focus {
+      border-bottom: 1px solid #8b0000;
     }
 
     button {
-      padding: 12px;
-      font-size: 18px;
-      background: red;
-      color: white;
-      border: none;
+      margin-top: 30px;
+      padding: 10px 30px;
+      background: transparent;
+      border: 1px solid #8b0000;
+      color: #e6e6e6;
       cursor: pointer;
-      margin-left: 10px;
+      letter-spacing: 3px;
+      transition: 0.3s;
     }
 
     button:hover {
-      background: darkred;
+      background: #8b0000;
     }
+
   </style>
 </head>
 <body>
 
   <img src="simbolo.png" alt="Símbolo da Ordem">
 
-  <h1>ACESSO</h1>
-  <p>Digite o código de 8 dígitos</p>
+  <h1>ACESSO RESTRITO</h1>
+  <div class="linha"></div>
 
-  <input type="text" id="codigo" maxlength="8">
-  <button onclick="verificar()">Entrar</button>
+  <input type="text" id="codigo" maxlength="8" placeholder="••••••••">
+  <button onclick="verificar()">ENTRAR</button>
 
 <script>
 function verificar() {
@@ -77,7 +99,7 @@ function verificar() {
     window.location.href = "COLE_AQUI_LINK_DA_REBECA";
   } 
   else {
-    alert("Código inválido!");
+    alert("ACESSO NEGADO");
   }
 }
 </script>
