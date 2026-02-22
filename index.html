@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Acesso - Ordem Paranormal</title>
+  <style>
+    body {
+      background-color: #0b0b0b;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      padding: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: red;
+      letter-spacing: 3px;
+    }
+
+    input {
+      padding: 12px;
+      font-size: 18px;
+      width: 200px;
+      text-align: center;
+      background: #222;
+      border: 1px solid red;
+      color: white;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 18px;
+      background: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    button:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔒 ACESSO</h1>
+  <p>Digite o código de 8 dígitos</p>
+
+  <input type="text" id="codigo" maxlength="8">
+  <button onclick="verificar()">Entrar</button>
+
+<script>
+function verificar() {
+  var codigo = document.getElementById("codigo").value;
+
+  if(codigo === "48291736") {
+    window.location.href = "https://crisordemparanormal.com/agente/1vmYMC6BibKfYjfiIQJW";
+  } 
+  else if(codigo === "73910582") {
+    window.location.href = "COLE_AQUI_LINK_DO_ADERBAL";
+  } 
+  else if(codigo === "56482019") {
+    window.location.href = "COLE_AQUI_LINK_DA_HELENA";
+  } 
+  else if(codigo === "91827364") {
+    window.location.href = "COLE_AQUI_LINK_DA_REBECA";
+  } 
+  else {
+    alert("Código inválido!");
+  }
+}
+</script>
+
+</body>
+</html>
