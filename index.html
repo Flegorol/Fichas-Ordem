@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fichas Ordem Paranormal</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      padding: 50px;
+    }
+    .ficha {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid red;
+      background: #222;
+    }
+    input {
+      padding: 10px;
+      font-size: 18px;
+    }
+    button {
+      padding: 10px;
+      font-size: 18px;
+      background: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔒 Acesso às Fichas</h1>
+  <p>Digite o código de 8 dígitos:</p>
+  
+  <input type="text" id="codigo" maxlength="8">
+  <button onclick="verificar()">Entrar</button>
+
+  <div id="melissa" class="ficha">
+    <h2>Melissa</h2>
+    <p>Classe: Ocultista</p>
+    <p>NEX: 40%</p>
+    <p>PV: 28</p>
+  </div>
+
+  <div id="aderbal" class="ficha">
+    <h2>Aderbal</h2>
+    <p>Classe: Combatente</p>
+    <p>NEX: 35%</p>
+    <p>PV: 42</p>
+  </div>
+
+  <div id="helena" class="ficha">
+    <h2>Helena</h2>
+    <p>Classe: Especialista</p>
+    <p>NEX: 45%</p>
+    <p>PV: 30</p>
+  </div>
+
+  <div id="rebeca" class="ficha">
+    <h2>Rebeca</h2>
+    <p>Classe: Ocultista</p>
+    <p>NEX: 50%</p>
+    <p>PV: 25</p>
+  </div>
+
+<script>
+function verificar() {
+  var codigo = document.getElementById("codigo").value;
+
+  document.querySelectorAll(".ficha").forEach(f => f.style.display = "none");
+
+  if(codigo === "48291736") {
+    document.getElementById("melissa").style.display = "block";
+  } else if(codigo === "73910582") {
+    document.getElementById("aderbal").style.display = "block";
+  } else if(codigo === "56482019") {
+    document.getElementById("helena").style.display = "block";
+  } else if(codigo === "91827364") {
+    document.getElementById("rebeca").style.display = "block";
+  } else {
+    alert("Código inválido!");
+  }
+}
+</script>
+
+</body>
+</html>
